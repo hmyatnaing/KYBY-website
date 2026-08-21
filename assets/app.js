@@ -31,7 +31,7 @@ function productTemplate(product) {
   return `
     <article class="product-card product-card-${escapeHtml(product.accent)}">
       <div class="product-image">
-        <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.nameEn)} bottle">
+        <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.flavorEn)} rice wine bottle">
       </div>
       <div class="product-body">
         <p class="product-kicker">${escapeHtml(product.nameEn)}</p>
@@ -52,7 +52,7 @@ function productTemplate(product) {
             .join("")}
         </dl>
         <div class="taste-note">
-          <span>口感 / Taste</span>
+          <span>အရသာ / Taste</span>
           <p>${escapeHtml(product.tasteMy)}</p>
           <p class="en-copy">${escapeHtml(product.tasteEn)}</p>
         </div>
