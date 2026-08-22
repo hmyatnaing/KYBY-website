@@ -23,9 +23,9 @@ function setHref(selector, value) {
 
 function productTemplate(product) {
   const specs = [
-    ["အရက်ပါဝင်မှု", product.alcohol],
-    ["တစ်ဘူး", product.bottle],
-    ["တစ်ပုံး", product.carton],
+    ["အရက်ပါဝင်မှု / Alcohol", product.alcohol],
+    ["တစ်ဘူး / Bottle", product.bottle],
+    ["တစ်ပုံး / Carton", product.carton],
   ];
 
   return `

@@ -29,7 +29,8 @@ body {
   color: var(--ink);
   background: var(--cream);
   font-family: "Noto Sans Myanmar", "Padauk", "Myanmar Sangam MN", "Myanmar MN", Arial, sans-serif;
-  line-height: 1.65;
+  line-height: 1.78;
+  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -92,13 +93,13 @@ a {
 
 .brand strong {
   font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.25;
+  line-height: 1.55;
 }
 
 .brand small {
   color: rgba(255, 247, 230, 0.74);
   font-size: 12px;
-  line-height: 1.25;
+  line-height: 1.35;
 }
 
 .main-nav {
@@ -108,6 +109,7 @@ a {
   gap: clamp(12px, 3vw, 28px);
   color: rgba(255, 247, 230, 0.86);
   font-size: 14px;
+  line-height: 1.6;
   white-space: nowrap;
 }
 
@@ -128,6 +130,7 @@ a {
   border-radius: 999px;
   font-weight: 800;
   font-size: 13px;
+  line-height: 1.5;
   white-space: nowrap;
 }
 
@@ -139,7 +142,7 @@ a {
   position: relative;
   display: grid;
   align-items: center;
-  min-height: min(760px, 78svh);
+  min-height: clamp(650px, 82svh, 820px);
   overflow: hidden;
   color: #fff;
   background: var(--green-950);
@@ -168,7 +171,7 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
-  width: min(610px, calc(100% - 36px));
+  width: min(680px, calc(100% - 36px));
   margin-left: clamp(18px, 7vw, 96px);
   padding: clamp(58px, 8vw, 96px) 0;
 }
@@ -178,32 +181,37 @@ a {
   color: var(--gold);
   font-size: 13px;
   font-weight: 800;
+  line-height: 1.7;
   letter-spacing: 0;
   text-transform: uppercase;
 }
 
 .hero h1 {
-  max-width: 610px;
+  max-width: 680px;
   margin: 0;
-  font-size: clamp(46px, 7vw, 88px);
-  line-height: 1.02;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.48;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .hero-tagline {
-  max-width: 620px;
-  margin: 10px 0 0;
+  max-width: 680px;
+  margin: 4px 0 0;
   color: #fff;
-  font-size: clamp(24px, 3.2vw, 42px);
+  font-size: clamp(22px, 2.6vw, 34px);
   font-weight: 900;
-  line-height: 1.18;
+  line-height: 1.58;
+  overflow-wrap: anywhere;
 }
 
 .hero-copy {
-  max-width: 590px;
-  margin: 18px 0 0;
+  max-width: 660px;
+  margin: 12px 0 0;
   color: rgba(255, 247, 230, 0.92);
-  font-size: clamp(16px, 2vw, 21px);
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.85;
+  overflow-wrap: anywhere;
 }
 
 .en-copy {
@@ -214,13 +222,14 @@ a {
 
 .hero .en-copy {
   color: rgba(255, 247, 230, 0.78);
+  line-height: 1.6;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .button {
@@ -232,7 +241,7 @@ a {
   border: 1px solid transparent;
   border-radius: 999px;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.55;
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 
@@ -288,6 +297,7 @@ a {
   margin: 8px 0 0;
   color: var(--muted);
   font-size: 14px;
+  line-height: 1.7;
 }
 
 .section {
@@ -303,8 +313,9 @@ a {
   margin: 0;
   color: var(--green-900);
   font-size: clamp(28px, 4vw, 48px);
-  line-height: 1.18;
+  line-height: 1.55;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .section-heading p:not(.eyebrow) {
@@ -312,6 +323,7 @@ a {
   margin: 14px 0 0;
   color: var(--muted);
   font-size: 16px;
+  line-height: 1.8;
 }
 
 .intro-section {
@@ -331,6 +343,7 @@ a {
 .intro-grid p {
   margin: 0;
   font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.8;
 }
 
 .products-section {
@@ -345,7 +358,7 @@ a {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(18px, 3vw, 34px);
   width: min(1180px, 100%);
   margin: 0 auto;
@@ -353,7 +366,7 @@ a {
 
 .product-card {
   display: grid;
-  grid-template-columns: minmax(170px, 0.82fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.18fr);
   overflow: hidden;
   background: #fff;
   border: 1px solid var(--line);
@@ -367,6 +380,21 @@ a {
 
 .product-card-lychee {
   border-top: 5px solid var(--red);
+}
+
+.product-card-ngacheik {
+  border-top: 5px solid #5d2147;
+}
+
+.product-card-ngacheik .product-image {
+  background:
+    radial-gradient(circle at 50% 36%, rgba(221, 184, 105, 0.22), transparent 38%),
+    linear-gradient(180deg, #23151f, #5d2147 54%, #c7a55c);
+}
+
+.product-card-ngacheik .product-image img {
+  object-fit: contain;
+  padding: 22px 10px 0;
 }
 
 .product-image {
@@ -404,18 +432,20 @@ a {
   margin: 0;
   color: var(--green-900);
   font-size: clamp(25px, 3vw, 35px);
-  line-height: 1.2;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
 }
 
 .product-body p {
   margin: 12px 0 0;
+  overflow-wrap: anywhere;
 }
 
 .product-flavor {
   color: var(--red);
   font-size: clamp(22px, 2.5vw, 30px);
   font-weight: 900;
-  line-height: 1.25;
+  line-height: 1.55;
 }
 
 .product-flavor span {
@@ -447,6 +477,7 @@ a {
   font-family: Arial, sans-serif;
   font-size: 11px;
   font-weight: 800;
+  line-height: 1.55;
   text-transform: uppercase;
 }
 
@@ -454,6 +485,8 @@ a {
   margin: 3px 0 0;
   color: var(--green-900);
   font-weight: 900;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
 }
 
 .taste-note {
@@ -471,6 +504,7 @@ a {
   color: var(--green-700);
   font-size: 13px;
   font-weight: 900;
+  line-height: 1.65;
 }
 
 .button-product {
@@ -518,6 +552,7 @@ a {
   color: var(--gold);
   font-family: Arial, sans-serif;
   font-size: 15px;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
@@ -626,8 +661,9 @@ a {
 .contact-section h2 {
   margin: 0;
   font-size: clamp(28px, 4vw, 50px);
-  line-height: 1.16;
+  line-height: 1.55;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .contact-section p {
@@ -666,7 +702,7 @@ a {
 .contact-line strong {
   overflow-wrap: anywhere;
   font-size: clamp(17px, 2vw, 22px);
-  line-height: 1.35;
+  line-height: 1.55;
 }
 
 .site-footer {
@@ -677,6 +713,7 @@ a {
   color: rgba(255, 247, 230, 0.76);
   background: var(--green-950);
   font-size: 13px;
+  line-height: 1.7;
 }
 
 .site-footer p {
@@ -761,11 +798,11 @@ a {
   }
 
   .hero h1 {
-    font-size: clamp(42px, 14vw, 58px);
+    font-size: clamp(38px, 12vw, 50px);
   }
 
   .hero-tagline {
-    font-size: clamp(23px, 7vw, 31px);
+    font-size: clamp(21px, 6.5vw, 29px);
   }
 
   .button,
