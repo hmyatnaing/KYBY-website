@@ -24,8 +24,8 @@ function setHref(selector, value) {
 function productTemplate(product) {
   const specs = [
     ["အရက်ပါဝင်မှု / Alcohol", product.alcohol],
-    ["တစ်ဘူး / Bottle", product.bottle],
-    ["တစ်ပုံး / Carton", product.carton],
+    ["ပုလင်းတစ်လုံး / Bottle", product.bottle],
+    ["တစ်ဖာ / Carton", product.carton],
   ];
 
   return `
@@ -61,7 +61,7 @@ function productTemplate(product) {
           <p>${escapeHtml(product.ingredientsMy)}</p>
           <p class="en-copy">${escapeHtml(product.ingredientsEn)}</p>
         </div>
-        <a class="button button-product" href="${escapeHtml(data.contact?.phoneHref)}">ဤအရသာကိုမှာယူရန်</a>
+        <a class="button button-product" href="${escapeHtml(data.contact?.phoneHref)}">ဤအရသာကို မှာယူရန်</a>
       </div>
     </article>
   `;
