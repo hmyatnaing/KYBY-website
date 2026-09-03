@@ -4,9 +4,9 @@ window.KYBY_SITE_DATA = {
     phoneHref: "tel:+9595063408",
     viberDisplay: "095063408",
     viberHref: "viber://chat?number=%2B9595063408",
-    address: "Oak Hpo Bus Stop, Shwepyithar Township, Yangon, Myanmar",
+    address: "No. 7/4, Lower Mingalardon Road, Oakhpo Bus Stop, Shwepyithar Township, Yangon, Myanmar",
     mapHref:
-      "https://www.google.com/maps/search/?api=1&query=Oak%20Hpo%20Bus%20Stop%2C%20Shwepyithar%20Township%2C%20Yangon%2C%20Myanmar",
+      "https://www.google.com/maps/search/?api=1&query=No.%207%2F4%2C%20Lower%20Mingalardon%20Road%2C%20Oakhpo%20Bus%20Stop%2C%20Shwepyithar%20Township%2C%20Yangon%2C%20Myanmar",
   },
 
   // Add future products here. Keep image paths relative to index.html.
